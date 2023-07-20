@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "928339627136",
+    "project_id": "gpent-188e6",
+    "storage_bucket": "gpent-188e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928339627136:android:e869a5d959089602d7aa65",
+        "android_client_info": {
+          "package_name": "com.aseem.gp_ent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928339627136-ls9oev6m5loveq8r5dr9jrk7nsqp3at5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE-cGQX8d7gWPdgjf5SaSwfJo03GbI3Tk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928339627136-ls9oev6m5loveq8r5dr9jrk7nsqp3at5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
