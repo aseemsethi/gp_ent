@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../services/auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Home extends StatelessWidget {
   final AuthService _auth = AuthService();
