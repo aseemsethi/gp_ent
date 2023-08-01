@@ -10,7 +10,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.brown[50],
       appBar: AppBar(
-        title: Text('GP Enterprise'),
+        title: Text('GP Security'),
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
         actions: <Widget>[
