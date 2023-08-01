@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:gp_ent/screens/wrapper_auth.dart';
 import 'package:gp_ent/screens/wrapper_home.dart';
+import './screens/qChapters.dart';
 import './services/auth.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -22,7 +23,13 @@ class MyApp extends StatelessWidget {
       value: AuthService().authStateChange(),
       initialData: null,
       child: MaterialApp(
-        home: Wrapper(),
+        //home: Wrapper(),
+        initialRoute: '/',
+        routes: {
+          '/': (ctx) => Wrapper(),
+          // '/': (ctx) => Screen1(),
+          '/questions': (ctx) => QChapters(),
+        },
       ),
     );
   }

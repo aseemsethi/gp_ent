@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../services/auth.dart';
+import '../data/securityHdg.dart';
+import '../widgets/securityHdgItem.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Home extends StatelessWidget {
@@ -25,7 +27,20 @@ class Home extends StatelessWidget {
           ),
         ],
       ),
-      body: Text("Hi"),
+      body: GridView(
+        padding: EdgeInsets.all(25),
+        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 200,
+          childAspectRatio: 3 / 2,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20,
+        ),
+        children: ModelData.map((mdata) => SecurityHdgItem(
+              mdata.id,
+              mdata.title,
+              mdata.color,
+            )).toList(),
+      ),
     );
   }
 }
