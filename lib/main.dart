@@ -29,7 +29,9 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         routes: {
           '/': (ctx) => Wrapper(),
-          '/chapters': (ctx) => QChapters(),
+          '/level1': (ctx) => QChapters(),
+          '/level2': (ctx) => QChapters(),
+          '/level3': (ctx) => QChapters(),
           '/questions': (ctx) => QScreen(),
         },
       ),

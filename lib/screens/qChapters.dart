@@ -13,6 +13,9 @@ class QChapters extends StatelessWidget {
         ModalRoute.of(context)?.settings.arguments as Map<String, String>;
     final title = routeArgs['title'];
     final id = routeArgs['id'];
+    final qChapters = levels[id];
+    print('qChapters called with $title and $id...qChapters = $qChapters');
+
     return Scaffold(
       appBar: AppBar(
         title: Text(title!),
@@ -21,13 +24,15 @@ class QChapters extends StatelessWidget {
         child: ListView.builder(
           itemBuilder: (ctx, index) {
             return qChaptersItem(
-              title: qChaptersData[index].title,
-              image: qChaptersData[index].imageUrl,
-              complexity: qChaptersData[index].complexity,
+              title: qChapters[index].title,
+              image: qChapters[index].imageUrl,
+              id: qChapters[index].id,
+              complexity: qChapters[index].complexity,
+              q: qChapters[index].q,
             );
             //Text(ModelData2[index].title);
           },
-          itemCount: qChaptersData.length,
+          itemCount: qChapters.length,
         ),
       ),
     );

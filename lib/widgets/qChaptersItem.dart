@@ -4,12 +4,16 @@ import '../models/qChaptersModel.dart';
 class qChaptersItem extends StatelessWidget {
   final String title;
   final String image;
+  final String id;
   final Complexity complexity;
+  final dynamic q;
 
   qChaptersItem({
     required this.title,
     required this.image,
+    required this.id,
     required this.complexity,
+    required this.q,
   });
 
   void onTapCall(BuildContext ctx) {
@@ -17,6 +21,8 @@ class qChaptersItem extends StatelessWidget {
       '/questions',
       arguments: {
         'title': title,
+        'id': id,
+        'q': q,
       },
     );
   }

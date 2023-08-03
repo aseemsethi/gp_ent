@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gp_ent/data/securityHdg.dart';
 //import '../screens/screen2.dart';
 
 class SecurityHdgItem extends StatelessWidget {
@@ -12,8 +13,10 @@ class SecurityHdgItem extends StatelessWidget {
     // Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
     //   return Screen2(id, title);
     // }));
+    var movetoPage = levels[id];
+    print("Category Selected from $id, move to page $movetoPage");
     Navigator.of(ctx).pushNamed(
-      '/chapters',
+      '/$id',
       arguments: {
         'id': id,
         'title': title,

@@ -35,7 +35,7 @@ class Home extends StatelessWidget {
           crossAxisSpacing: 20,
           mainAxisSpacing: 20,
         ),
-        children: ModelData.map((mdata) => SecurityHdgItem(
+        children: TopHomeMenu.map((mdata) => SecurityHdgItem(
               mdata.id,
               mdata.title,
               mdata.color,

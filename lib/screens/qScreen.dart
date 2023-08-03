@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gp_ent/data/qData.dart';
 import 'package:gp_ent/widgets/answer.dart';
-import '../data/qData.dart';
+//import '../data/qData.dart';
 
 class QScreen extends StatefulWidget {
   @override
@@ -8,13 +9,13 @@ class QScreen extends StatefulWidget {
 }
 
 class _QScreenState extends State<QScreen> {
-  //     Icon(Icons.check_circle, color: Colors.green),
   List<Icon> _scoreTracker = [];
   int _questionIndex = 0;
   int _totalScore = 0;
   bool ansSelected = false;
   bool endOfQuiz = false;
   bool correctAnsSelected = false;
+  var quesAns = null;
 
   void _questionAnswered(bool answerScore) {
     setState(() {
@@ -32,7 +33,7 @@ class _QScreenState extends State<QScreen> {
       );
     });
     // quiz ends
-    if (_questionIndex + 1 == questions.length) {
+    if (_questionIndex + 1 == quesAns.length) {
       endOfQuiz = true;
     }
   }
@@ -44,7 +45,7 @@ class _QScreenState extends State<QScreen> {
       correctAnsSelected = false;
     });
     // end of the quiz
-    if (_questionIndex >= questions.length) {
+    if (_questionIndex >= quesAns.length) {
       _resetQuiz();
     }
   }
@@ -61,8 +62,13 @@ class _QScreenState extends State<QScreen> {
   @override
   Widget build(BuildContext context) {
     final routeArgs =
-        ModalRoute.of(context)?.settings.arguments as Map<String, String>;
+        ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
     final title = routeArgs['title'];
+    final id = routeArgs['id'];
+    final q = routeArgs['q'];
+    print("Quesions screen called with title: $title, id: $id");
+    quesAns = q;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(title!),
@@ -89,7 +95,7 @@ class _QScreenState extends State<QScreen> {
             ),
             child: Center(
               child: Text(
-                questions[_questionIndex]['question'].toString(),
+                quesAns[_questionIndex]['question'].toString(),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 18.0,
@@ -99,7 +105,7 @@ class _QScreenState extends State<QScreen> {
               ),
             ),
           ),
-          ...(questions[_questionIndex]['answers'] as List<Map<String, Object>>)
+          ...(quesAns[_questionIndex]['answers'] as List<Map<String, Object>>)
               .map((answer) => Answer(
                     answerText: answer['answerText'].toString(),
                     answerColor: ansSelected
@@ -135,7 +141,7 @@ class _QScreenState extends State<QScreen> {
           Container(
             padding: EdgeInsets.all(20.0),
             child: Text(
-              '${_totalScore.toString()}/${questions.length}',
+              '${_totalScore.toString()}/${quesAns.length}',
               style: TextStyle(
                 fontSize: 30.0,
                 fontWeight: FontWeight.bold,

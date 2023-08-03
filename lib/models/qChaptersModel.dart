@@ -12,11 +12,13 @@ class qChaptersModel {
   final String title;
   final String imageUrl;
   final Complexity complexity;
+  final dynamic q;
 
   const qChaptersModel({
     required this.id,
     required this.title,
     required this.imageUrl,
     required this.complexity,
+    required this.q,
   });
 }
