@@ -13,7 +13,7 @@ class SecurityHdgItem extends StatelessWidget {
     //   return Screen2(id, title);
     // }));
     Navigator.of(ctx).pushNamed(
-      '/questions',
+      '/chapters',
       arguments: {
         'id': id,
         'title': title,
@@ -33,7 +33,7 @@ class SecurityHdgItem extends StatelessWidget {
         child: Text(
           title,
           style: TextStyle(
-            fontSize: 24,
+            fontSize: 20,
             fontWeight: FontWeight.bold,
             color: Colors.black.withOpacity(0.9),
           ),

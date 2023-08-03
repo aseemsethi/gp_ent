@@ -12,12 +12,19 @@ class qChaptersItem extends StatelessWidget {
     required this.complexity,
   });
 
-  void onTapCall() {}
+  void onTapCall(BuildContext ctx) {
+    Navigator.of(ctx).pushNamed(
+      '/questions',
+      arguments: {
+        'title': title,
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: onTapCall,
+      onTap: () => onTapCall(context),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
