@@ -39,7 +39,7 @@ const TopHomeMenu = [
 const Map<String, dynamic> levels = {
   "level1": qChaptersDataLevel1,
   "level2": qChaptersDataLevel2,
-  "level3": qChaptersDataLevel2,
+  "level3": qChaptersDataLevel3,
 };
 
 const qChaptersDataLevel1 = [
@@ -84,4 +84,13 @@ const qChaptersDataLevel2 = [
       //'https://placebear.com/g/200/200',
       complexity: Complexity.Challenging,
       q: qLevel2Basic),
+];
+
+const qChaptersDataLevel3 = [
+  qChaptersModel(
+      id: "c1",
+      title: "Very Advanced Security",
+      imageUrl: 'https://source.unsplash.com/user/c_v_r/1900x800',
+      complexity: Complexity.Simple,
+      q: qLevel3Basic),
 ];

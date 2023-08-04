@@ -53,3 +53,30 @@ const qLevel2Basic = [
     ],
   },
 ];
+
+const qLevel3Basic = [
+  {
+    'question': 'question 3-1 ?',
+    'answers': [
+      {'answerText': 'answer1', 'score': true},
+      {'answerText': 'answer2', 'score': false},
+      {'answerText': 'answer3', 'score': false},
+    ],
+  },
+  {
+    'question': 'question 3-2 ?',
+    'answers': [
+      {'answerText': 'answer1', 'score': false},
+      {'answerText': 'answer1', 'score': true},
+      {'answerText': 'answer1', 'score': false},
+    ],
+  },
+  {
+    'question': 'question 3-3 ?',
+    'answers': [
+      {'answerText': 'answer1', 'score': false},
+      {'answerText': 'answer1', 'score': false},
+      {'answerText': 'answer1', 'score': true},
+    ],
+  },
+];
