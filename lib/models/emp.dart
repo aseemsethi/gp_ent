@@ -1,7 +1,7 @@
 class Emp {
   final String name;
   final String id;
-  final String bday;
+  final Map<String, int> score;
 
-  Emp({required this.name, required this.id, required this.bday});
+  Emp({required this.name, required this.id, required this.score});
 }

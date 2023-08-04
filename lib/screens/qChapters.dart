@@ -14,7 +14,7 @@ class QChapters extends StatelessWidget {
     final title = routeArgs['title'];
     final id = routeArgs['id'];
     final qChapters = levels[id];
-    print('qChapters called with $title and $id...qChapters = $qChapters');
+    print('qChapters - Moved to $id');
 
     return Scaffold(
       appBar: AppBar(

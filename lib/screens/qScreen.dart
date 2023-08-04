@@ -66,7 +66,7 @@ class _QScreenState extends State<QScreen> {
     final title = routeArgs['title'];
     final id = routeArgs['id'];
     final q = routeArgs['q'];
-    print("Quesions screen called with title: $title, id: $id");
+    print("qScreen: moved to title: $title, id: $id");
     quesAns = q;
 
     return Scaffold(

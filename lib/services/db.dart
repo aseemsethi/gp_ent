@@ -9,11 +9,12 @@ class DatabaseService {
   final CollectionReference empCollection =
       FirebaseFirestore.instance.collection('emp');
 
-  Future<void> updateUserData(String name, String id, String bday) async {
+  Future<void> updateUserData(
+      String name, String id, Map<String, int> score) async {
     return await empCollection.doc(uid).set({
-      'name': id,
-      'id': name,
-      'bday': bday,
+      'name': name,
+      'id': id,
+      'score': score,
     });
   }
 
@@ -23,7 +24,7 @@ class DatabaseService {
       return Emp(
           name: doc['name'] ?? '',
           id: doc['id'] ?? '0',
-          bday: doc['bday'] ?? '0');
+          score: doc['score'] ?? '{"null": 0}');
     }).toList();
   }
 

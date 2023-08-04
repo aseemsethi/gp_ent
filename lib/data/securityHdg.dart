@@ -44,26 +44,26 @@ const Map<String, dynamic> levels = {
 
 const qChaptersDataLevel1 = [
   qChaptersModel(
-      id: "c1",
+      id: "level1-c1",
       title: "Basic Security",
       imageUrl: 'https://source.unsplash.com/user/c_v_r/1900x800',
       complexity: Complexity.Simple,
       q: qLevel1Basic),
   qChaptersModel(
-      id: "c2",
+      id: "level1-c2",
       title: "IAM",
       imageUrl: 'https://source.unsplash.com/user/c_v_r/1900x800',
       //'https://placebear.com/g/200/200',
       complexity: Complexity.Challenging,
       q: qLevel1Basic),
   qChaptersModel(
-      id: "c3",
+      id: "level1-c3",
       title: "Firewall",
       imageUrl: 'https://source.unsplash.com/user/c_v_r/1900x800',
       complexity: Complexity.Hard,
       q: qLevel1Basic),
   qChaptersModel(
-      id: "c4",
+      id: "level1-c4",
       title: "Certificates and Encryption",
       imageUrl: 'https://source.unsplash.com/user/c_v_r/1900x800',
       complexity: Complexity.Hard,
@@ -72,13 +72,13 @@ const qChaptersDataLevel1 = [
 
 const qChaptersDataLevel2 = [
   qChaptersModel(
-      id: "c1",
+      id: "level2-c1",
       title: "Advanced Security",
       imageUrl: 'https://source.unsplash.com/user/c_v_r/1900x800',
       complexity: Complexity.Simple,
       q: qLevel2Basic),
   qChaptersModel(
-      id: "c2",
+      id: "level2-c2",
       title: "Advanced IAM",
       imageUrl: 'https://source.unsplash.com/user/c_v_r/1900x800',
       //'https://placebear.com/g/200/200',
@@ -88,7 +88,7 @@ const qChaptersDataLevel2 = [
 
 const qChaptersDataLevel3 = [
   qChaptersModel(
-      id: "c1",
+      id: "level3-c1",
       title: "Very Advanced Security",
       imageUrl: 'https://source.unsplash.com/user/c_v_r/1900x800',
       complexity: Complexity.Simple,

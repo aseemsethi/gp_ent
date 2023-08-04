@@ -30,8 +30,9 @@ class AuthService {
       UserCredential result = await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
       // TBD: need to remove this
-      await DatabaseService(uid: result.user!.uid)
-          .updateUserData('Aseem', '1', "01011970");
+      await DatabaseService(uid: result.user!.uid).updateUserData(
+          result.user!.email.toString(), result.user!.uid, {'nil': 0});
+      print("registred user: $result");
     } catch (error) {
       print(error.toString());
       return null;

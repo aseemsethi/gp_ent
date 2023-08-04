@@ -14,7 +14,7 @@ class SecurityHdgItem extends StatelessWidget {
     //   return Screen2(id, title);
     // }));
     var movetoPage = levels[id];
-    print("Category Selected from $id, move to page $movetoPage");
+    print("SecurityHdgs - Move to $id");
     Navigator.of(ctx).pushNamed(
       '/$id',
       arguments: {
