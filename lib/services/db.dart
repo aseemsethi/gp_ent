@@ -9,11 +9,17 @@ class DatabaseService {
   final CollectionReference empCollection =
       FirebaseFirestore.instance.collection('emp');
 
-  Future<void> updateUserData(
+  Future<void> initializeUserData(
       String name, String id, Map<String, int> score) async {
     return await empCollection.doc(uid).set({
       'name': name,
       'id': id,
+      'score': score,
+    });
+  }
+
+  Future<void> updateUserData(String uid, Map<String, int> score) async {
+    return await empCollection.doc(uid).update({
       'score': score,
     });
   }

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gp_ent/data/qData.dart';
 import 'package:gp_ent/widgets/answer.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import '../services/db.dart';
+
 //import '../data/qData.dart';
 
 class QScreen extends StatefulWidget {
@@ -16,8 +19,10 @@ class _QScreenState extends State<QScreen> {
   bool endOfQuiz = false;
   bool correctAnsSelected = false;
   var quesAns = null;
+  var id;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  void _questionAnswered(bool answerScore) {
+  Future<void> _questionAnswered(bool answerScore) async {
     setState(() {
       // ans was selected
       ansSelected = true;
@@ -35,6 +40,8 @@ class _QScreenState extends State<QScreen> {
     // quiz ends
     if (_questionIndex + 1 == quesAns.length) {
       endOfQuiz = true;
+      await DatabaseService(uid: _auth.currentUser!.uid)
+          .updateUserData(_auth.currentUser!.uid, {id.toString(): _totalScore});
     }
   }
 
@@ -64,7 +71,7 @@ class _QScreenState extends State<QScreen> {
     final routeArgs =
         ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
     final title = routeArgs['title'];
-    final id = routeArgs['id'];
+    id = routeArgs['id'];
     final q = routeArgs['q'];
     print("qScreen: moved to title: $title, id: $id");
     quesAns = q;
