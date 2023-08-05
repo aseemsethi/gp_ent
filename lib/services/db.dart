@@ -19,9 +19,10 @@ class DatabaseService {
   }
 
   Future<void> updateUserData(String uid, Map<String, int> score) async {
-    return await empCollection.doc(uid).update({
+    //if ((empCollection.doc(uid).get(score))
+    return await empCollection.doc(uid).set({
       'score': score,
-    });
+    }, SetOptions(merge: true));
   }
 
   // emp list from snapshot

@@ -3,7 +3,7 @@ import '../models/qChaptersModel.dart';
 
 class qChaptersItem extends StatelessWidget {
   final String title;
-  final String image;
+  final Image image;
   final String id;
   final Complexity complexity;
   final dynamic q;
@@ -46,12 +46,13 @@ class qChaptersItem extends StatelessWidget {
                     topLeft: Radius.circular(15),
                     topRight: Radius.circular(15),
                   ),
-                  child: Image.network(
-                    image,
-                    height: 150,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
-                  ),
+                  child: image,
+                  // child: Image.network(
+                  //   image,
+                  //   height: 150,
+                  //   width: double.infinity,
+                  //   fit: BoxFit.cover,
+                  // ),
                 ),
                 Positioned(
                   bottom: 20,

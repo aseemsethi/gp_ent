@@ -10,7 +10,7 @@ enum Complexity {
 class qChaptersModel {
   final String id;
   final String title;
-  final String imageUrl;
+  final Image imageUrl;
   final Complexity complexity;
   final dynamic q;
 
