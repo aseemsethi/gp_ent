@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         routes: {
           '/': (ctx) => Wrapper(),
+          '/phishing': (ctx) => QChapters(),
           '/level1': (ctx) => QChapters(),
           '/level2': (ctx) => QChapters(),
           '/level3': (ctx) => QChapters(),
