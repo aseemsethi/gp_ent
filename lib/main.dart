@@ -4,6 +4,7 @@ import 'package:gp_ent/screens/wrapper_auth.dart';
 import 'package:gp_ent/screens/wrapper_home.dart';
 import './screens/qChapters.dart';
 import './screens/qScreen.dart';
+import './screens/progress.dart';
 import './services/auth.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
           '/level2': (ctx) => QChapters(),
           '/level3': (ctx) => QChapters(),
           '/questions': (ctx) => QScreen(),
+          '/progress': (ctx) => Progress(),
         },
       ),
     );

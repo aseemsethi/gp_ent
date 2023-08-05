@@ -4,8 +4,6 @@ import 'package:gp_ent/widgets/answer.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../services/db.dart';
 
-//import '../data/qData.dart';
-
 class QScreen extends StatefulWidget {
   @override
   State<QScreen> createState() => _QScreenState();
