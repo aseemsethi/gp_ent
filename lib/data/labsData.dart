@@ -3,7 +3,7 @@ import '../models/labsModel.dart';
 
 const labsMenu = [
   LabsModel(
-    id: 'Intro',
+    id: 'intro',
     title: 'Introduction',
     color: Colors.orange,
   ),
@@ -13,8 +13,8 @@ const labsMenu = [
     color: Colors.orange,
   ),
   LabsModel(
-    id: 'Cfg Access Keys',
-    title: 'Cfg Access Keys',
+    id: 'Configure Keys',
+    title: 'Configure Keys',
     color: Colors.orange,
   ),
   LabsModel(
@@ -24,17 +24,17 @@ const labsMenu = [
   ),
   LabsModel(
     id: 'EC2-1 with SG',
-    title: 'EC2-1 Security Groups',
+    title: 'EC2-1 Security',
     color: Colors.lightBlue,
   ),
   LabsModel(
     id: 'EC2-2 with SG',
-    title: 'EC2-2 Security Groups',
+    title: 'EC2-2 Security',
     color: Colors.lightBlue,
   ),
   LabsModel(
-    id: 'Enable SSH, HTTP in SG',
-    title: 'Enable SSH, HTTP',
+    id: 'Enable SSH, HTTP',
+    title: 'Enable SSH/HTTP',
     color: Colors.lightBlue,
   ),
   LabsModel(

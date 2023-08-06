@@ -12,6 +12,8 @@ import './labs/network.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 
+import 'labs/intro.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -41,6 +43,7 @@ class MyApp extends StatelessWidget {
           '/progress': (ctx) => Progress(),
           '/labs': (ctx) => Labs(),
           '/network': (ctx) => Network(),
+          '/intro': (ctx) => Intro(),
         },
       ),
     );

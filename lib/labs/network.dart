@@ -51,9 +51,9 @@ class ItemsScene extends StatefulWidget {
 
 class _ItemsSceneState extends State<ItemsScene> {
   List<ItemModel> items = [
-    ItemModel(offset: Offset(70, 100), text: 'text1'),
-    ItemModel(offset: Offset(200, 100), text: 'text2'),
-    ItemModel(offset: Offset(200, 230), text: 'text3'),
+    ItemModel(offset: Offset(70, 100), text: 'Internet GW'),
+    ItemModel(offset: Offset(200, 100), text: 'EC2-1 (Public Subnet)'),
+    ItemModel(offset: Offset(200, 230), text: 'EC2-2 (Pvt Subnet)'),
   ];
 
   Function onDragStart(int index) => (x, y) {
@@ -151,10 +151,17 @@ class CurvedPainter extends CustomPainter {
           offsets[index],
           Paint()
             ..color = Colors.red
-            ..strokeWidth = 2,
+            ..strokeWidth = 4,
         );
       });
     }
+    // canvas.drawLine(
+    //   offsets[0],
+    //   offsets[2],
+    //   Paint()
+    //     ..color = Colors.red
+    //     ..strokeWidth = 2,
+    // );
   }
 
   @override
