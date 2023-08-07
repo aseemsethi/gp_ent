@@ -11,7 +11,7 @@ const TopHomeMenu = [
   ),
   securityHdg(
     id: 'level1',
-    title: 'Basic Security Tests',
+    title: 'Basic Tests',
     color: Colors.lightBlueAccent,
   ),
   securityHdg(

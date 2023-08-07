@@ -26,8 +26,14 @@ class Intro extends StatelessWidget {
             ),
           ],
         ),
-        body: Column(
+        body: ListView(
           children: [
+            Image.asset(
+              'assets/images/one.jpeg',
+              width: 600,
+              height: 100,
+              fit: BoxFit.cover,
+            ),
             titleSection,
             textSection,
           ],
