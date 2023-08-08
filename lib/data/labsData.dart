@@ -13,7 +13,7 @@ const labsMenu = [
     color: Colors.orange,
   ),
   LabsModel(
-    id: 'Configure Keys',
+    id: 'cfgkeys',
     title: 'Configure Keys',
     color: Colors.orange,
   ),

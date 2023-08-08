@@ -82,12 +82,24 @@ Widget titleSection = Container(
 Widget textSection = Container(
   padding: const EdgeInsets.all(32),
   child: const Text(
-    'Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese '
-    'Alps. Situated 1,578 meters above sea level, it is one of the '
-    'larger Alpine Lakes. A gondola ride from Kandersteg, followed by a '
-    'half-hour walk through pastures and pine forest, leads you to the '
-    'lake, which warms to 20 degrees Celsius in the summer. Activities '
-    'enjoyed here include rowing, and riding the summer toboggan run.',
+    '''Information Security programs are build around 3 objectives, commonly known as CIA - Confidentiality, Integrity, Availability. '
+    
+    Confidentiality - information is not disclosed to unauthorized individuals, entities and process. 
+
+    Integrity - maintaining accuracy and completeness of data. 
+
+    Availability - information must be available when needed. Denial-of-Service attack impacts Availability, as one example of an attack on this security objective.
+
+    There are a few more critical objectives that we would like Information Security program to achieve - 
+    Compliance: Meeting regulatory and legal requirements, such as those related to data privacy and protection.
+    Risk management: Identifying and mitigating potential security threats to prevent harm to the organization.
+    Disaster recovery: Developing and implementing a plan to recover from data loss or system failures.
+    
+    We will walk through a series of lab excercises that you would be executing an nodes in an AWS account, that will help us achieve some of the above gaols. 
+    
+    After every excercise, the lab will check whether the excercise was done correctly. For this, the app user is requested to enter Access Keys, as described in the following tutorial, for the app to connect using AWS APIs and confirm the results of the lab.
+
+    ''',
     softWrap: true,
   ),
 );
