@@ -38,7 +38,7 @@ class _CfgKeysState extends State<CfgKeys> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("VPC"),
+        title: Text("GP Security - Config Keys"),
       ),
       body: ListView(
         children: <Widget>[
@@ -149,7 +149,8 @@ class _CfgKeysState extends State<CfgKeys> {
                     Expanded(
                         child: ElevatedButton(
                       onPressed: () {
-                        _fetchDBAll();
+                        _show();
+                        _fetchVpc();
                         final snackBar = SnackBar(
                           content: const Text('Network Deleted'),
                         );
@@ -159,7 +160,7 @@ class _CfgKeysState extends State<CfgKeys> {
                         backgroundColor: Colors.orangeAccent,
                       ),
                       child: Text(
-                        "Delete",
+                        "Show",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w500,
@@ -193,7 +194,7 @@ class _CfgKeysState extends State<CfgKeys> {
     allRows.forEach(print);
   }
 
-  void _fetchDBAll() async {
+  void _show() async {
     print("_fetchDBAll");
     final dbH = DatabaseHelper.instance;
     var rows = await dbH.fetchDB();
@@ -203,15 +204,16 @@ class _CfgKeysState extends State<CfgKeys> {
     );
   }
 
-  // void _fetchVpc(String name) async {
-  //   final dbHelper = DatabaseHelper.instance;
-  //   DBModel dbM = await dbHelper.getVpc(name);
-  //   vpcName.text = dbM.vpcName.toString();
-  //   cloudName.text = dbM.cloudName.toString();
-  //   accessKeyId.text = dbM.accessKeyId.toString();
-  //   secretAccessKey.text = dbM.secretAccessKey.toString();
-  //   region.text = dbM.region.toString();
-  // }
+  void _fetchVpc() async {
+    final dbH = DatabaseHelper.instance;
+    var rows = await dbH.fetchDB();
+    //DBModel dbM = await dbHelper.getVpc(name);
+    vpcName.text = rows[0].vpcName.toString();
+    cloudName.text = rows[0].cloudName.toString();
+    accessKeyId.text = rows[0].accessKeyId.toString();
+    secretAccessKey.text = rows[0].secretAccessKey.toString();
+    region.text = rows[0].region.toString();
+  }
 
   // void _insert() async {
   //   final dbHelper = DatabaseHelper.instance;

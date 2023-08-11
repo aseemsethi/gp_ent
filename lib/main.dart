@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:gp_ent/labs/addVpc.dart';
+import 'package:gp_ent/labs/awsSetup.dart';
+import 'package:gp_ent/labs/lab1verify.dart';
 import 'package:gp_ent/screens/wrapper_auth.dart';
 import 'package:gp_ent/screens/wrapper_home.dart';
 import './screens/qChapters.dart';
@@ -46,6 +48,8 @@ class MyApp extends StatelessWidget {
           '/network': (ctx) => Network(),
           '/intro': (ctx) => Intro(),
           '/cfgkeys': (ctx) => CfgKeys(),
+          '/awsSetup': (ctx) => AwsSetup(),
+          '/lab1Verify': (ctx) => Lab1Verify(),
         },
       ),
     );

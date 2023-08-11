@@ -8,9 +8,9 @@ const labsMenu = [
     color: Colors.orange,
   ),
   LabsModel(
-    id: 'AWS Setup',
+    id: 'awsSetup',
     title: 'AWS Setup',
-    color: Colors.orange,
+    color: Colors.lightBlue,
   ),
   LabsModel(
     id: 'cfgkeys',
@@ -20,26 +20,26 @@ const labsMenu = [
   LabsModel(
     id: 'network',
     title: 'Network Diagram',
-    color: Colors.grey,
+    color: Colors.orange,
   ),
   LabsModel(
-    id: 'EC2-1 with SG',
-    title: 'EC2-1 Security',
+    id: 'lab1',
+    title: 'Lab1 - Setup EC2s',
     color: Colors.lightBlue,
   ),
   LabsModel(
-    id: 'EC2-2 with SG',
-    title: 'EC2-2 Security',
+    id: 'lab1Verify',
+    title: 'Lab1 - Verify',
+    color: Colors.orange,
+  ),
+  LabsModel(
+    id: 'lab2',
+    title: 'Lab2 - Firewall',
     color: Colors.lightBlue,
   ),
   LabsModel(
-    id: 'Enable SSH, HTTP',
-    title: 'Enable SSH/HTTP',
-    color: Colors.lightBlue,
-  ),
-  LabsModel(
-    id: 'Apply to EC2s',
-    title: 'Apply to EC2s',
-    color: Colors.lightBlue,
+    id: 'lab1Verify',
+    title: 'Lab2 - Verify',
+    color: Colors.orange,
   ),
 ];
