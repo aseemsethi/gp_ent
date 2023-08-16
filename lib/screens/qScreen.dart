@@ -91,9 +91,9 @@ class _QScreenState extends State<QScreen> {
           ),
           Container(
             width: double.infinity,
-            height: 150.0,
-            margin: EdgeInsets.only(bottom: 10.0, left: 30.0, right: 30.0),
-            padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 20.0),
+            height: 200.0,
+            margin: EdgeInsets.only(bottom: 10.0, left: 15.0, right: 15.0),
+            padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
             decoration: BoxDecoration(
               color: Colors.lightBlueAccent,
               borderRadius: BorderRadius.circular(10.0),
@@ -103,7 +103,7 @@ class _QScreenState extends State<QScreen> {
                 quesAns[_questionIndex]['question'].toString(),
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 18.0,
+                  fontSize: 15.0,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
@@ -130,8 +130,7 @@ class _QScreenState extends State<QScreen> {
             height: 20.0,
           ),
           ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                minimumSize: Size(double.infinity, 40.0)),
+            style: ElevatedButton.styleFrom(minimumSize: Size(100.0, 40.0)),
             onPressed: () {
               if (ansSelected == false) {
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -141,14 +140,20 @@ class _QScreenState extends State<QScreen> {
               }
               _nextQuestion();
             },
-            child: Text(endOfQuiz ? 'Restart' : 'Next'),
+            child: Text(
+              endOfQuiz ? 'Restart' : 'Next',
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
           Container(
             padding: EdgeInsets.all(20.0),
             child: Text(
               '${_totalScore.toString()}/${quesAns.length}',
               style: TextStyle(
-                fontSize: 30.0,
+                fontSize: 26.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -156,7 +161,7 @@ class _QScreenState extends State<QScreen> {
           if (ansSelected && !endOfQuiz)
             Container(
               height: 60,
-              width: double.infinity,
+              width: 200, // double.infinity,
               color: correctAnsSelected ? Colors.green : Colors.red,
               child: Center(
                 child: Text(
