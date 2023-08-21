@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'dart:developer';
-import 'db.dart';
+import 'fireDB.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -31,7 +31,7 @@ class AuthService {
           email: email, password: password);
       // TBD: need to remove this
       await DatabaseService(uid: result.user!.uid).initializeUserData(
-          result.user!.email.toString(), result.user!.uid, {'nil': 0});
+          result.user!.email.toString(), result.user!.uid, {});
       print("registred user: $result");
     } catch (error) {
       print(error.toString());

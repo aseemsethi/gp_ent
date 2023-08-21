@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gp_ent/data/qData.dart';
 import 'package:gp_ent/widgets/answer.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import '../services/db.dart';
+import '../services/fireDB.dart';
 
 class QScreen extends StatefulWidget {
   @override

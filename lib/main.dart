@@ -39,9 +39,9 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (ctx) => Wrapper(),
           '/phishing': (ctx) => QChapters(),
-          '/level1': (ctx) => QChapters(),
-          '/level2': (ctx) => QChapters(),
-          '/level3': (ctx) => QChapters(),
+          '/securityTest': (ctx) => QChapters(),
+          '/secOps1': (ctx) => QChapters(),
+          '/secOps2': (ctx) => QChapters(),
           '/questions': (ctx) => QScreen(),
           '/progress': (ctx) => Progress(),
           '/labs': (ctx) => Labs(),

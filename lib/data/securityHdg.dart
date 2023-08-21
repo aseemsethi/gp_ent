@@ -7,21 +7,21 @@ const TopHomeMenu = [
   securityHdg(
     id: 'phishing',
     title: 'Phishing Test',
-    color: Colors.orange,
-  ),
-  securityHdg(
-    id: 'level1',
-    title: 'Basic Tests',
     color: Colors.lightBlueAccent,
   ),
   securityHdg(
-    id: 'devops1',
-    title: 'DevOps - Level 1',
+    id: 'securityTest',
+    title: 'Security Test',
     color: Colors.lightBlueAccent,
   ),
   securityHdg(
-    id: 'devops2',
-    title: 'DevOps - Level 2',
+    id: 'secOps1',
+    title: 'SecOps - Level 1',
+    color: Colors.lightBlueAccent,
+  ),
+  securityHdg(
+    id: 'secOps2',
+    title: 'SecOps - Level 2',
     color: Colors.lightBlueAccent,
   ),
   securityHdg(
@@ -30,22 +30,22 @@ const TopHomeMenu = [
     color: Colors.yellow,
   ),
   securityHdg(
-    id: 'labs',
-    title: 'Labs',
+    id: 'learning',
+    title: 'Learning Modules',
     color: Colors.lightGreen,
   ),
   securityHdg(
-    id: 'learning',
-    title: 'Learning Modules',
+    id: 'labs',
+    title: 'Labs',
     color: Colors.lightGreen,
   ),
 ];
 
 Map<String, dynamic> levels = {
   "phishing": qChaptersPhishing,
-  "level1": qChaptersDataLevel1,
-  "devops1": qChaptersDevops1,
-  "devops2": qChaptersDevops2,
+  "securityTest": qChaptersDataLevel1,
+  "secOps1": qChaptersSecOps1,
+  "secOps2": qChaptersSecOps2,
 };
 
 var qChaptersPhishing = [
@@ -71,43 +71,43 @@ var qChaptersDataLevel1 = [
       imageUrl: Image.asset('assets/images/two.jpeg'),
       //'https://placebear.com/g/200/200',
       complexity: Complexity.Challenging,
-      q: qLevel1Basic),
+      q: qLevel1IAM),
   qChaptersModel(
       id: "level1-c3",
       title: "Firewall",
       imageUrl: Image.asset('assets/images/three.jpeg'),
       complexity: Complexity.Hard,
-      q: qLevel1Basic),
+      q: qLevel1FW),
   qChaptersModel(
       id: "level1-c4",
       title: "Certificates and Encryption",
       imageUrl: Image.asset('assets/images/four.jpeg'),
       complexity: Complexity.Hard,
-      q: qLevel1Basic),
+      q: qLevel1Cert),
 ];
 
-var qChaptersDevops1 = [
+var qChaptersSecOps1 = [
   qChaptersModel(
-      id: "devops1-c1",
+      id: "secOps1chap1",
       title: "Advanced Security",
       imageUrl: Image.asset('assets/images/five.jpeg'),
       complexity: Complexity.Simple,
-      q: qDevops1c1),
+      q: qSecOpsL1c1),
   qChaptersModel(
-      id: "devops1-c2",
+      id: "secOps2chap2",
       title: "Advanced IAM",
       imageUrl: Image.asset('assets/images/six.jpeg'),
       //'https://placebear.com/g/200/200',
       complexity: Complexity.Challenging,
-      q: qDevops1c1),
+      q: qSecOpsL1c2),
 ];
 
-var qChaptersDevops2 = [
+var qChaptersSecOps2 = [
   qChaptersModel(
       id: "devops2-c1",
       title: "Very Advanced Security",
       imageUrl: Image.asset('assets/images/one.jpeg'),
       // 'https://source.unsplash.com/user/c_v_r/1900x800',
       complexity: Complexity.Simple,
-      q: qDevops2c1),
+      q: qSecOpsL2),
 ];
